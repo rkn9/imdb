@@ -1,13 +1,138 @@
-body {
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+}
+body {
+  background-color: #212122;
+}
+body::-webkit-scrollbar {
+  display: none;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+a {
+  text-decoration: none;
+  color: white;
+}
+header {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  padding: 20px;
+  height: 70px;
+}
+header img {
+  width: 70px;
+}
+
+.home-poster img {
+  height: calc(100vh - 70px);
+  object-fit: cover;
+  object-position: top;
+}
+
+.home-poster a {
+  display: block;
+  position: relative;
+}
+
+.home-poster .home-poster-overlay {
+  text-align: start;
+  width: 90%;
+  position: absolute;
+  left: 5%;
+  bottom: 20%;
+  text-shadow: #212122;
+  text-shadow: 0 10px 10px black;
+}
+
+.home-poster .home-poster-overlay h1 {
+  font-size: 6vw;
+}
+
+.home-poster .home-poster-overlay span {
+  display: block;
+  font-size: 50px;
+}
+.home-poster .home-poster-overlay em {
+  font-size: 20px;
+}
+.popular-section {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  padding: 20px;
+}
+h2 {
+  font-size: 40px;
+}
+.cards {
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 25px;
+  display: flex;
+}
+.card {
+  width: 230px;
+}
+.movie-list img {
+  width: 230px;
+}
+
+/* detail page  */
+.detail-page {
+  width: 80%;
+  margin: auto;
+  position: relative;
+}
+.detail-page img {
+  border-radius: 5px;
+  width: 100%;
+  height: 75vh;
+  object-fit: cover;
+  object-position: top;
+}
+.poster-about {
+  position: absolute;
+  bottom: -15%;
+  display: flex;
+  width: 90%;
+  left: 5%;
+  gap: 30px;
+}
+
+.detail-page .poster img {
+  box-shadow: 0 0 4px 2px rgba(255, 255, 255, 0.301);
+  width: 260px;
+  height: 400px;
+  object-fit: cover;
+  /* object-position: top; */
+}
+
+.detail-page .poster-about span {
+  margin: 4px;
+  display: inline-block;
+  padding: 5px 20px;
+  border-radius: 50px;
+  border: 2px solid white;
+}
+
+.detail-page .right-poster {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.detail-page .overview {
+  border: 1px solid white;
+  padding: 5px 10px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px 1px white;
+}
+.detail-page .overview strong {
+  font-size: 20px;
 }
